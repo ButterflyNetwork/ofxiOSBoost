@@ -24,19 +24,19 @@ here="`dirname \"$0\"`"
 echo "cd-ing to $here"
 cd "$here" || exit 1
 
-CPPSTD=c++11    #c++89, c++99, c++14
+CPPSTD=c++14    #c++89, c++99, c++14
 STDLIB=libc++   # libstdc++
 COMPILER=clang++
-PARALLEL_MAKE=16   # how many threads to make boost with
+PARALLEL_MAKE=36   # how many threads to make boost with
 
-BOOST_V1=1.60.0
-BOOST_V2=1_60_0
+BOOST_V1=1.67.0
+BOOST_V2=1_67_0
 
 #BITCODE="-fembed-bitcode"  # Uncomment this line for Bitcode generation
 
 CURRENTPATH=`pwd`
 LOGDIR="$CURRENTPATH/build/logs/"
-IOS_MIN_VERSION=7.0
+IOS_MIN_VERSION=10.0
 SDKVERSION=`xcrun -sdk iphoneos --show-sdk-version`
 OSX_SDKVERSION=`xcrun -sdk macosx --show-sdk-version`
 DEVELOPER=`xcode-select -print-path`
@@ -135,16 +135,16 @@ postcleanEverything()
 {
 	echo Cleaning everything after the build...
 
-	rm -rf iphone-build iphonesim-build osx-build
-	rm -rf $PREFIXDIR
-	rm -rf $IOSBUILDDIR/armv6/obj
-    rm -rf $IOSBUILDDIR/armv7/obj
-    #rm -rf $IOSBUILDDIR/armv7s/obj
-	rm -rf $IOSBUILDDIR/arm64/obj
-    rm -rf $IOSBUILDDIR/i386/obj
-	rm -rf $IOSBUILDDIR/x86_64/obj
-    rm -rf $TARBALLDIR/build
-    rm -rf $LOGDIR
+    # rm -rf iphone-build iphonesim-build osx-build
+    # rm -rf $PREFIXDIR
+    # rm -rf $IOSBUILDDIR/armv6/obj
+    #     rm -rf $IOSBUILDDIR/armv7/obj
+    #     #rm -rf $IOSBUILDDIR/armv7s/obj
+    # rm -rf $IOSBUILDDIR/arm64/obj
+    #     rm -rf $IOSBUILDDIR/i386/obj
+    # rm -rf $IOSBUILDDIR/x86_64/obj
+    #     rm -rf $TARBALLDIR/build
+    #     rm -rf $LOGDIR
 	doneSection
 }
 
