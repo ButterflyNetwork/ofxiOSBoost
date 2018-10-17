@@ -76,7 +76,7 @@ esac
 : ${PREFIXDIR:=`pwd`/../build/ios/prefix}
 : ${COMPILER:="clang++"}
 : ${OUTPUT_DIR:=`pwd`/../libs/boost/}
-: ${OUTPUT_DIR_LIB:=`pwd`/../libs/boost/ios/}
+: ${OUTPUT_DIR_LIB:=`pwd`/../libs/boost/lib/ios/}
 : ${OUTPUT_DIR_SRC:=`pwd`/../libs/boost/include/boost}
 
 : ${BOOST_VERSION:=$BOOST_V1}

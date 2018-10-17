@@ -19,7 +19,7 @@
 !*/debug/*
 .DS_Store
 
-libs/boost/lib/.DS_Store
+libs/boost/lib
 build
 
 *.pbxuser
